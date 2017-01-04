@@ -223,6 +223,7 @@ class UpdateLoaderWorker implements WorkerTask {
         } catch (Exception e) {
             e.printStackTrace();
             isFinishedWithSuccess = false;
+            Log.e("CHCP", "Exception: "+filesStructure.getDownloadFolder()+" "+ contentUrl+" "+Log.getStackTraceString(e));
         }
 
         return isFinishedWithSuccess;
